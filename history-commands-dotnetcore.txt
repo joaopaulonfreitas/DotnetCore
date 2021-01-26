@@ -1,0 +1,63 @@
+ 1533  dotnet run
+ 1678  dotnet --version
+ 1680  dotnet --info
+ 1912  dotnet new web -n ProAgil.WEB
+ 1914  dotnet new -n ProAgil.API
+ 1916  dotnet new api -n ProAgil.API
+ 1924  cd dotnet/
+ 1930  dotnet --version
+ 1936  dotnet new webapi
+ 1942  dotnet build
+ 1943  dotnet run
+ 1945  dotnet run
+ 1949  sudo rm -R dotnetcore/
+ 1951  mkdir dotnetCore
+ 1952  cd dotnetCore/
+ 1954  dotnet new web -n ProAgil.Web
+ 1957  dotnet new mvc -n ProAgil.MVC
+ 1958  dotnet new webapi -n ProAgil.WebAPI
+ 1969  dotnet run
+ 1971  dotnet build
+ 1973  dotnet run
+ 1975  dotnet build
+ 1976  dotnet run
+ 1978  dotnet watch run
+ 1980  dotnet build
+ 1982  dotnet watch run
+ 1984  dotnet ef
+ 1986  dotnet ef
+ 1988  dotnet ef --help
+ 1991  dotnet tool install -g dotnet-ef
+ 1993  dotnet ef
+ 1994  dotnet ef migrations add init
+ 1996  dotnet build
+ 1997  dotnet ef migrations add init
+ 1999  dotnet ef migrations add init
+ 2000  dotnet ef database update
+ 2001  dotnet --version
+ 2002  sudo apt-get update;   sudo apt-get install -y apt-transport-https &&   sudo apt-get update &&   sudo apt-get install -y dotnet-sdk-5.0
+ 2005  dotnet --version
+ 2007  cd cursos/dotnet/
+ 2009  cd dotnetCore
+ 2015  dotnet new classlib -n ProAgil.Domain
+ 2016  dotnet new classlib -n ProAgil.Repository
+ 2019  dotnet new sln -n ProAgil
+ 2025  dotnet add ProAgil.Repository/ProAgil.Repository.csproj reference ProAgil.Domain/ProAgil.Domain.csproj 
+ 2028  dotnet add ProAgil.API/ProAgil.API.csproj reference ProAgil.Domain/ProAgil.Domain.csproj 
+ 2029  dotnet add ProAgil.API/ProAgil.API.csproj reference ProAgil.Repository/ProAgil.Repository.csproj 
+ 2031  dotnet sln ProAgil.sln add ProAgil.API/ProAgil.API.csproj ProAgil.Repository/ProAgil.Repository.csproj ProAgil.Domain/ProAgil.Domain.csproj 
+ 2033  dotnet build
+ 2035  history > dotnet-commands-project.txt
+ 2038  history | grep dotnet
+ 2039  history | grep dotnet > history-commands-dotnetcore.txt
+
+
+## Domain
+Camada que armazena os Modelos
+
+## Repository
+Camada que armazena o DbContext, migrations etc...
+
+# Executar migrations de Camadas Repository
+> dotnet ef --startup-project ../ProAgil.API/ migrations add init
+> dotnet ef --startup-project ../ProAgil.API database update
